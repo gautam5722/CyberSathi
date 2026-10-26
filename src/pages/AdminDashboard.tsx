@@ -80,8 +80,12 @@ export default function AdminDashboard() {
                 throw new Error('Session nahi mila. Dobara login karein.')
             }
 
-            const path = url.replace('http://localhost:3000', '')
+            // const path = url.replace('http://localhost:3000', '')
+
+            const path = url.replace(/^https?:\/\/[^/]+/, '')
+
             const response = await apiFetch(path, options)
+
             const data = await response.json().catch(() => ({}))
 
             if (response.status === 401) {
@@ -105,7 +109,7 @@ export default function AdminDashboard() {
 
 
 
- // here remove loadcontactsettings and handlesavecontactsettings function 
+    // here remove loadcontactsettings and handlesavecontactsettings function 
     const loadNotifications = useCallback(async () => {
         setError('')
 
@@ -125,7 +129,7 @@ export default function AdminDashboard() {
         void loadNotifications()
     }, [loadNotifications])
 
-// here use effect gor contact setting remove 
+    // here use effect gor contact setting remove 
 
     useEffect(() => {
         const stopAutoRefresh = startTokenAutoRefresh(() => {
@@ -447,7 +451,7 @@ export default function AdminDashboard() {
                     </p>
                 )}
 
-{/* here secton change for contact setting and keep in backupfile */}
+                {/* here secton change for contact setting and keep in backupfile */}
 
                 <section className="relative overflow-hidden rounded-3xl border border-blue-200 bg-gradient-to-br from-sky-50 via-indigo-50/80 to-violet-100 p-4 shadow-xl shadow-indigo-200/40 sm:p-6 md:p-8">
                     {/* Top gradient accent */}
@@ -685,8 +689,8 @@ export default function AdminDashboard() {
                 <section
                     id="notifications"
                     className="relative overflow-hidden rounded-3xl border border-emerald-200 bg-gradient-to-br from-emerald-50 via-white to-cyan-50 p-5 shadow-xl shadow-emerald-900/10 md:p-8"
-                >                    
-                <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500" />
+                >
+                    <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500" />
 
                     {/* Header */}
                     <div className="mb-7 flex flex-col gap-4 rounded-2xl border border-emerald-100 bg-white/90 p-5 shadow-sm sm:flex-row sm:items-center sm:justify-between md:p-6">
