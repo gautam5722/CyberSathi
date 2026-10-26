@@ -1,5 +1,5 @@
 
-const API_BASE_URL = 'http://localhost:3000'
+const API_BASE_URL = 'https://cybersathi-backend-8umx.onrender.com'
 
 let refreshPromise: Promise<string | null> | null = null
 let refreshTimer: ReturnType<typeof setTimeout> | null = null

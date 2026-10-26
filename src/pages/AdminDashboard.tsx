@@ -23,7 +23,9 @@ type Notification = {
 
 // here contact api url change 
 
-const API_URL = 'http://localhost:3000/notifications'
+// const API_URL = 'http://localhost:3000/notifications'
+
+const API_URL = 'https://cybersathi-backend-8umx.onrender.com/notifications'
 
 const DEFAULT_DETAILS: NotificationDetail[] = [
     { heading: 'Important Dates', content: '' },

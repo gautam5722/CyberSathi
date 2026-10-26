@@ -11,7 +11,10 @@ type Notification = {
   createdAt: string
 }
 
-const API_URL = 'http://localhost:3000/notifications/published'
+// const API_URL = 'http://localhost:3000/notifications/published'
+
+const API_URL = 'https://cybersathi-backend-8umx.onrender.com/notifications/published'
+
 const PAGE_SIZE = 10
 
 const categoryOptions = [

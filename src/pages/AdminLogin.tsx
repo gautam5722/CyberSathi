@@ -3,7 +3,9 @@ import { useState, type FormEvent } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { FaShieldAlt, FaArrowLeft, FaArrowRight, FaLock, FaEnvelope } from 'react-icons/fa'
 
-const API_URL = 'http://localhost:3000/auth/login'
+// const API_URL = 'http://localhost:3000/auth/login'
+
+const API_URL = 'https://cybersathi-backend-8umx.onrender.com/auth/login'
 
 export default function AdminLogin() {
     const navigate = useNavigate()

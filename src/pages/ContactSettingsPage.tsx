@@ -17,7 +17,9 @@ type ContactSettings = {
     customLinks: ContactLink[] | null
 }
 
-const CONTACT_API_URL = 'http://localhost:3000/contact-settings'
+// const CONTACT_API_URL = 'http://localhost:3000/contact-settings'
+
+const CONTACT_API_URL = 'https://cybersathi-backend-8umx.onrender.com/contact-settings'
 
 export default function ContactSettingsPage() {
     const navigate = useNavigate()
